@@ -409,7 +409,6 @@ class ElectronTransferMechanism(Scene):
                     run_time=0.15
                 )
             
-            # PHASE 2: MULTIPLE Electron Transfer Events - ENHANCED FREQUENCY
             # Check for active cations among the MOVING ions (ensuring transfers happen to moving ions)
             active_moving_cations = []
             for cation in moving_cations:  # Only consider moving cations for electron transfer
