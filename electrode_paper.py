@@ -337,7 +337,7 @@ class ElectronTransferMechanism(Scene):
         # Main continuous loop - shows steady-state electrochemical process
         for cycle in range(25):  # Extended loop for continuous demonstration
             
-            # PHASE 1: Monte Carlo Diffusion (Ionic Movement) - ENHANCED VELOCITY
+            # Monte Carlo Diffusion (Ionic Movement)
             # Move random selection of particles to simulate diffusion
             n_moving_cations = min(15, len(cations))  # Move even more particles each cycle
             n_moving_anions = min(15, len(anions))
@@ -345,7 +345,7 @@ class ElectronTransferMechanism(Scene):
             moving_cations = random.sample(list(cations), n_moving_cations)
             moving_anions = random.sample(list(anions), n_moving_anions)
             
-            # Create diffusion movements with HIGHER VELOCITIES
+            # Create diffusion movements
             diffusion_animations = []
             all_moving_ions = moving_cations + moving_anions  # Track all moving ions for electron transfer
             
