@@ -26,11 +26,7 @@ FONT_SIZE_PARTICLES = 12  # Increased font size for + and - symbols
 class ElectronTransferMechanism(Scene):
     def construct(self):
         self.camera.background_color = "#1a1a1a"
-        
-        # Title removed as requested
-        
-        # Split screen: Energy diagram on left, spherical electrode animation on right
-        
+            
         # LEFT SIDE: Energy diagram (similar to Figure 1 in paper)
         # Create coordinate system with enhanced aesthetics
         axes = Axes(
