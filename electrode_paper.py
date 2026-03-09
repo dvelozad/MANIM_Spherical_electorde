@@ -584,16 +584,13 @@ class ElectronTransferMechanism(Scene):
                     if transfer_attempt < max_transfers_per_cycle - 1:
                         self.wait(0.1)
             
-            # CLEANUP PHASE: Remove any lingering neutral atoms that might have been missed
             if len(neutral_atoms) > 0:
                 lingering_atoms = list(neutral_atoms)  # Create a copy of the list
                 for atom in lingering_atoms:
                     self.play(FadeOut(atom), run_time=0.1)
                     neutral_atoms.remove(atom)
             
-            # PHASE 3: Brief pause and process indication
             # Activity indication now handled by highlight boxes - removed old flashing
-            
             # Show transfer activity for this cycle
             if num_transfers_this_cycle > 0:
                 # Create a temporary indicator for multiple transfers
